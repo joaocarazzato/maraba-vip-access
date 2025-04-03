@@ -4,7 +4,7 @@ import React from 'react';
 const InstructorProfile = () => {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -13,9 +13,9 @@ const InstructorProfile = () => {
               <div className="absolute -inset-1 bg-gradient-gold rounded-full blur-md opacity-50"></div>
               <div className="relative rounded-full overflow-hidden border border-maraba-gold aspect-square max-w-md mx-auto">
                 <img 
-                  src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop"
                   alt="Júnior Marabá" 
-                  className="object-cover w-full h-full"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
