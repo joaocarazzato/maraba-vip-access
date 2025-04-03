@@ -60,7 +60,7 @@ const VipRoomFeatures = () => {
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden bg-maraba-dark-purple">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
@@ -85,9 +85,9 @@ const VipRoomFeatures = () => {
           ))}
         </div>
         
-        <div className="relative py-16 px-8 bg-black/30 backdrop-blur-sm max-w-4xl mx-auto mt-20 luxury-card">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto">
-            <div className="bg-black px-8 py-3 whitespace-nowrap">
+        <div className="relative py-16 px-8 bg-black/30 backdrop-blur-sm max-w-4xl mx-auto mt-24 luxury-card">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="bg-black px-8 py-3 border border-white/10 rounded-sm whitespace-nowrap">
               <h3 className="text-xl font-medium text-maraba-gold">Ao final da Sala VIP, você terá:</h3>
             </div>
           </div>

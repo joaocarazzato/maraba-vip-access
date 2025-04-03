@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop')] bg-cover bg-center opacity-10 z-[-1]"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop')] bg-cover bg-center opacity-10 z-[-1]"></div>
       
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -70,14 +70,14 @@ const HeroSection = () => {
                   <div>
                     <Input 
                       placeholder="Seu nome completo" 
-                      className="luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold"
+                      className="luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold px-3"
                     />
                   </div>
                   <div>
                     <Input 
                       type="email" 
                       placeholder="Seu melhor e-mail" 
-                      className="luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold"
+                      className="luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold px-3"
                     />
                   </div>
                   <Button className="w-full bg-gradient-gold hover:opacity-90 text-black font-bold tracking-wider py-7 rounded-sm transition-all duration-300 shadow-gold group text-lg">

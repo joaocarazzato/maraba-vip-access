@@ -2,13 +2,9 @@
 import React from 'react';
 import { Play } from "lucide-react";
 
-const VideoTestimonial = ({ name, role, location }: {
-  name: string;
-  role: string;
-  location: string;
-}) => {
+const VideoTestimonial = ({ thumbnail }: { thumbnail: string }) => {
   return (
-    <div className="luxury-card bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 h-full flex flex-col">
+    <div className="luxury-card bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 h-full">
       <div className="relative aspect-video w-full overflow-hidden group cursor-pointer">
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300">
           <div className="h-16 w-16 rounded-full bg-maraba-gold/90 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
@@ -16,14 +12,10 @@ const VideoTestimonial = ({ name, role, location }: {
           </div>
         </div>
         <img 
-          src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop"
-          alt={`Depoimento de ${name}`}
+          src={thumbnail}
+          alt="Depoimento em vídeo" 
           className="w-full h-full object-cover"
         />
-      </div>
-      <div className="p-6">
-        <h4 className="font-medium text-white text-lg">{name}</h4>
-        <p className="text-white/60 text-sm">{role} • {location}</p>
       </div>
     </div>
   );
@@ -32,25 +24,19 @@ const VideoTestimonial = ({ name, role, location }: {
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Ana Luiza Santos",
-      role: "CEO, TechStart",
-      location: "São Paulo"
+      thumbnail: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop"
     },
     {
-      name: "Roberto Mendes",
-      role: "Empresário",
-      location: "Rio de Janeiro"
+      thumbnail: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop"
     },
     {
-      name: "Carla Oliveira",
-      role: "Líder de Comunidade",
-      location: "Belo Horizonte"
+      thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop"
     }
   ];
 
   return (
     <section className="py-20 md:py-28 bg-gradient-to-b from-maraba-dark-purple to-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
@@ -66,11 +52,7 @@ const TestimonialsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="animate-fade-in" style={{animationDelay: `${0.1 * index}s`}}>
-              <VideoTestimonial
-                name={testimonial.name}
-                role={testimonial.role}
-                location={testimonial.location}
-              />
+              <VideoTestimonial thumbnail={testimonial.thumbnail} />
             </div>
           ))}
         </div>
