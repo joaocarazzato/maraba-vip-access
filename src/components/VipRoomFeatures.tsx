@@ -43,7 +43,7 @@ const VipRoomFeatures = () => {
     },
     {
       icon: ArrowUp,
-      title: "As doze camadas do "EU"",
+      title: "As doze camadas do 'EU'",
       description: "Um mapa que mostra o nível de desenvolvimento pessoal em que você está e o que precisa ser feito para subir de nível."
     },
     {
