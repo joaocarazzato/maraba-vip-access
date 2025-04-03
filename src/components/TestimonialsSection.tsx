@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 
 const TestimonialCard = ({ name, role, location, content }: {
@@ -10,18 +9,16 @@ const TestimonialCard = ({ name, role, location, content }: {
   content: string;
 }) => {
   return (
-    <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:shadow-lg hover:shadow-maraba-purple/10 transition-all duration-300 h-full">
-      <CardContent className="p-6 space-y-4 relative">
-        <div className="absolute top-4 right-4 text-maraba-gold opacity-40">
-          <Quote className="h-12 w-12" />
-        </div>
-        <p className="text-white/80 italic relative z-10">"{content}"</p>
-        <div className="pt-4 border-t border-white/10">
-          <h4 className="font-semibold text-maraba-light-purple">{name}</h4>
-          <p className="text-white/60 text-sm">{role} • {location}</p>
-        </div>
-      </CardContent>
-    </Card>
+    <div className="luxury-card bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 p-8 h-full">
+      <div className="text-maraba-gold opacity-40 mb-6">
+        <Quote className="h-8 w-8" />
+      </div>
+      <p className="text-white/80 italic leading-relaxed mb-8">"{content}"</p>
+      <div className="pt-6 border-t border-white/10">
+        <h4 className="font-medium text-white text-lg">{name}</h4>
+        <p className="text-white/60 text-sm">{role} • {location}</p>
+      </div>
+    </div>
   );
 };
 
@@ -54,20 +51,21 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-black to-maraba-dark-purple relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-maraba-dark-purple to-black relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
       
-      <div className="container px-4 md:px-6 relative z-10">
+      <div className="minimal-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Depoimentos de quem já vivenciou esse conteúdo <span className="text-maraba-gold">transformador</span>
+          <div className="inline-block px-4 py-1 bg-white/5 backdrop-blur-sm rounded-sm border border-white/10 text-white/70 font-medium text-xs uppercase tracking-widest mb-6">
+            Resultados reais
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
+            O que as pessoas estão <span className="text-maraba-gold">dizendo</span>
           </h2>
-          <p className="text-white/80 text-lg">
-            Histórias reais de pessoas que desbloquearam seu próximo nível
-          </p>
+          <div className="w-20 h-0.5 bg-gradient-gold mx-auto"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="animate-fade-in" style={{animationDelay: `${0.1 * index}s`}}>
               <TestimonialCard

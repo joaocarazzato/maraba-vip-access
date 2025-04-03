@@ -116,6 +116,46 @@
   animation: shine 2s ease-in-out infinite alternate;
 }
 
+.gold-border {
+  position: relative;
+}
+
+.gold-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37 0%, #F5E7A5 100%);
+}
+
+.luxury-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.luxury-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+
+.luxury-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+
 @keyframes shine {
   0% {
     background-position: 0% center;
@@ -124,3 +164,24 @@
     background-position: 100% center;
   }
 }
+
+.bg-gradient-gold {
+  background: linear-gradient(90deg, #D4AF37 0%, #F5E7A5 100%);
+}
+
+.shadow-gold {
+  box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.25);
+}
+
+.luxury-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.luxury-input {
+  @apply bg-transparent border-b border-white/30 focus:border-maraba-gold transition-colors duration-300 outline-none px-0 py-2;
+}
+
+.minimal-container {
+  @apply max-w-6xl mx-auto px-4 md:px-6 lg:px-8;
+}
+
