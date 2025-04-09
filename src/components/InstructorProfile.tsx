@@ -1,10 +1,12 @@
 
 import React from 'react';
+import JuniorMarabaWhite from '@/assets/junior_maraba_white.jpg';
+import JuniorMarabaColor from '@/assets/junior_maraba_color.jpg';
 
 const InstructorProfile = () => {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
+      <div className="absolute inset-0 bg-[url('@/assets/junior_maraba_white.jpg')] bg-cover bg-center opacity-5 z-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -13,7 +15,7 @@ const InstructorProfile = () => {
               <div className="absolute -inset-1 bg-gradient-gold rounded-full blur-md opacity-50"></div>
               <div className="relative rounded-full overflow-hidden border border-maraba-gold aspect-square max-w-md mx-auto">
                 <img 
-                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop"
+                  src={JuniorMarabaColor}
                   alt="Marabá" 
                   className="w-full h-full object-cover"
                 />

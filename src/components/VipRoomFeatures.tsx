@@ -94,7 +94,7 @@ const VipRoomFeatures = () => {
           ))}
         </div>
         
-        <div className="relative py-16 px-8 bg-black/30 backdrop-blur-sm max-w-4xl mx-auto mt-24 luxury-card">
+        <div className="!overflow-visible relative py-16 px-8 bg-black/30 backdrop-blur-sm max-w-4xl mx-auto mt-24 luxury-card">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="bg-black px-8 py-3 border border-white/10 rounded-sm whitespace-nowrap">
               <h3 className="text-xl font-medium text-maraba-gold">Ao final da Sala VIP, você terá:</h3>

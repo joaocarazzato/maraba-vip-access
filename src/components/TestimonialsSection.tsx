@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Play } from "lucide-react";
+import JuniorMarabaWhite from '@/assets/junior_maraba_white.jpg';
+import JuniorMarabaColor from '@/assets/junior_maraba_color.jpg';
 
 const VideoTestimonial = ({ thumbnail }: { thumbnail: string }) => {
   return (
@@ -36,7 +38,7 @@ const TestimonialsSection = () => {
 
   return (
     <section className="py-20 md:py-28 bg-gradient-to-b from-maraba-dark-purple to-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop')] bg-cover bg-center opacity-5 z-0"></div>
+      <div className="absolute inset-0 bg-[url('@/assets/junior_maraba_white.jpg')] bg-cover bg-center opacity-5 z-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
@@ -44,7 +46,7 @@ const TestimonialsSection = () => {
             Resultados reais
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
-            O que as pessoas estão <span className="text-maraba-gold">dizendo</span>
+            Gigantes <span className="text-maraba-gold">transformados</span>
           </h2>
           <div className="w-20 h-0.5 bg-gradient-gold mx-auto"></div>
         </div>

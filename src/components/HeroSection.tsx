@@ -3,13 +3,15 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import JuniorMarabaWhite from '@/assets/junior_maraba_white.jpg';
+import JuniorMarabaColor from '@/assets/junior_maraba_color.jpg';
 import { ArrowRight, Lock, Calendar, Clock, Globe, DollarSign } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop')] bg-cover bg-center opacity-10 z-[-1]"></div>
+      <div className="absolute inset-0 bg-[url('@/assets/junior_maraba_white.jpg')] bg-cover bg-center opacity-10 z-[-1]"></div>
       
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -20,7 +22,7 @@ const HeroSection = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              ENTRE PARA A <br /><span className="gold-shine">SALA VIP</span>
+              Por que algumas pessoas prosperam... <br /><span className="gold-shine">e outras não</span>?
             </h1>
             
             <div className="gold-border">
@@ -30,7 +32,7 @@ const HeroSection = () => {
             </div>
             
             <p className="text-white/70 italic text-lg">
-              Descubra por que algumas pessoas prosperam… e outras não — e desbloqueie o seu próximo nível.
+              Entre para a sala VIP — e desbloqueie o seu próximo nível.
             </p>
           </div>
           
@@ -43,13 +45,13 @@ const HeroSection = () => {
                   <div className="flex items-center gap-3 bg-black/40 p-4 rounded-sm border border-white/10">
                     <Calendar className="text-maraba-gold h-6 w-6" />
                     <div>
-                      <p className="text-white/80 text-sm">Em breve</p>
+                      <p className="text-white/80 text-sm">22/04</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 bg-black/40 p-4 rounded-sm border border-white/10">
                     <Clock className="text-maraba-gold h-6 w-6" />
                     <div>
-                      <p className="text-white/80 text-sm">90 minutos</p>
+                      <p className="text-white/80 text-sm">20h</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 bg-black/40 p-4 rounded-sm border border-white/10">
@@ -67,19 +69,19 @@ const HeroSection = () => {
                 </div>
                 
                 <form className="space-y-6">
-                  <div>
-                    <Input 
-                      placeholder="Seu nome completo" 
-                      className="luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold px-3"
-                    />
-                  </div>
-                  <div>
-                    <Input 
-                      type="email" 
-                      placeholder="Seu melhor e-mail" 
-                      className="luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold px-3"
-                    />
-                  </div>
+                <div>
+                  <Input 
+                    placeholder="Seu nome completo" 
+                    className="!pl-2 luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold pl-6"
+                  />
+                </div>
+                <div>
+                  <Input 
+                    type="email" 
+                    placeholder="Seu melhor e-mail" 
+                    className="!pl-2 luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold pl-6"
+                  />
+                </div>
                   <Button className="w-full bg-gradient-gold hover:opacity-90 text-black font-bold tracking-wider py-7 rounded-sm transition-all duration-300 shadow-gold group text-lg">
                     <span>GARANTIR MINHA VAGA</span>
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
