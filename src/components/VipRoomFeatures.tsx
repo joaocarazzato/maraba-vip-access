@@ -60,7 +60,7 @@ const VipRoomFeatures = () => {
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden bg-maraba-dark-purple">
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/dcf79be8-9b44-42a8-a570-3c2dd13a9dca.png')] bg-cover bg-center opacity-20 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/e15daa98-67f5-4db3-b940-15737f36a539.png')] bg-cover bg-center opacity-15 z-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
