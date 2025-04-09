@@ -31,7 +31,7 @@ const Footer = () => {
             <a href="#" className="text-white/60 hover:text-maraba-gold transition-colors">
               Termos de uso
             </a>
-            <span class="text-white/20">|</span>
+            <span className="text-white/20">|</span>
             <a href="#" className="text-white/60 hover:text-maraba-gold transition-colors">
               Política de privacidade
             </a>
