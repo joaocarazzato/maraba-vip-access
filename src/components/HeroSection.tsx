@@ -6,8 +6,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 
 const HeroSection = () => {
   return <section className="py-20 md:py-28 relative overflow-hidden">
-      <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
-      <div className="absolute inset-0 bg-[url('@/assets/junior_maraba_white.jpg')] bg-cover bg-center opacity-10 z-[-1]"></div>
+      <div className="absolute inset-0 bg-black opacity-95 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/9097ee83-5bf7-491d-acc2-0e2ef220c710.png')] bg-cover bg-center opacity-30 z-[-2] grayscale"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80 z-[-1]"></div>
       
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
