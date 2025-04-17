@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -38,56 +37,41 @@ const HeroSection = () => {
           
           <div className="w-full lg:w-2/5 animate-fade-in" style={{animationDelay: "0.3s"}}>
             <Card className="luxury-card bg-black/40 backdrop-blur-md border-white/10 shadow-gold">
-              <div className="p-8 space-y-6">
-                <h3 className="text-center text-xl font-semibold text-white mb-4">Garanta sua vaga agora</h3>
+              <div className="p-8 space-y-8">
+                <h3 className="text-center text-2xl font-semibold text-white mb-6">Reserve sua vaga</h3>
                 
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="flex items-center gap-3 bg-black/40 p-4 rounded-sm border border-white/10">
-                    <Calendar className="text-maraba-gold h-6 w-6" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 bg-black/40 p-6 rounded-sm border border-white/10">
+                    <Calendar className="text-maraba-gold h-8 w-8" />
                     <div>
-                      <p className="text-white/80 text-sm">22/04</p>
+                      <p className="text-white/60 text-sm uppercase tracking-wide">Data</p>
+                      <p className="text-white text-lg font-medium">22 de Abril</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 bg-black/40 p-4 rounded-sm border border-white/10">
-                    <Clock className="text-maraba-gold h-6 w-6" />
+                  
+                  <div className="flex items-center gap-3 bg-black/40 p-6 rounded-sm border border-white/10">
+                    <Clock className="text-maraba-gold h-8 w-8" />
                     <div>
-                      <p className="text-white/80 text-sm">20h</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 bg-black/40 p-4 rounded-sm border border-white/10">
-                    <Globe className="text-maraba-gold h-6 w-6" />
-                    <div>
-                      <p className="text-white/80 text-sm">Ao vivo e online</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 bg-black/40 p-4 rounded-sm border border-white/10">
-                    <DollarSign className="text-maraba-gold h-6 w-6" />
-                    <div>
-                      <p className="text-white/80 text-sm">R$ 97,00</p>
+                      <p className="text-white/60 text-sm uppercase tracking-wide">Horário</p>
+                      <p className="text-white text-lg font-medium">20:00</p>
                     </div>
                   </div>
                 </div>
+
+                <div className="flex items-center justify-center gap-3 bg-black/40 p-6 rounded-sm border border-white/10">
+                  <DollarSign className="text-maraba-gold h-8 w-8" />
+                  <div className="text-center">
+                    <p className="text-white/60 text-sm uppercase tracking-wide">Investimento</p>
+                    <p className="text-white text-2xl font-semibold">R$ 97,00</p>
+                  </div>
+                </div>
+
+                <Button className="w-full bg-gradient-gold hover:opacity-90 text-black font-bold tracking-wider py-7 rounded-sm transition-all duration-300 shadow-gold group text-lg">
+                  <span>GARANTIR MINHA VAGA</span>
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
                 
-                <form className="space-y-6">
-                <div>
-                  <Input 
-                    placeholder="Seu nome completo" 
-                    className="!pl-2 luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold pl-6"
-                  />
-                </div>
-                <div>
-                  <Input 
-                    type="email" 
-                    placeholder="Seu melhor e-mail" 
-                    className="!pl-2 luxury-input h-14 text-white text-base border-white/30 focus:border-maraba-gold pl-6"
-                  />
-                </div>
-                  <Button className="w-full bg-gradient-gold hover:opacity-90 text-black font-bold tracking-wider py-7 rounded-sm transition-all duration-300 shadow-gold group text-lg">
-                    <span>GARANTIR MINHA VAGA</span>
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </form>
-                <p className="text-white/70 text-sm text-center mt-6">
+                <p className="text-white/70 text-sm text-center">
                   Vagas limitadas para este evento exclusivo.
                 </p>
               </div>
