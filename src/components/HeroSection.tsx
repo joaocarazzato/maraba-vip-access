@@ -1,13 +1,10 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Lock, Calendar, Clock, DollarSign } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-
 const HeroSection = () => {
-  return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
+  return <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
       <div className="absolute inset-0 bg-[url('@/assets/junior_maraba_white.jpg')] bg-cover bg-center opacity-10 z-[-1]"></div>
       
@@ -35,7 +32,9 @@ const HeroSection = () => {
           </div>
           
           <div className="w-full lg:w-2/5">
-            <Card className="bg-black/40 border-white/10 shadow-lg rounded-xl overflow-hidden relative backdrop-blur-md animate-fade-in" style={{animationDelay: "0.3s"}}>
+            <Card className="bg-black/40 border-white/10 shadow-lg rounded-xl overflow-hidden relative backdrop-blur-md animate-fade-in" style={{
+            animationDelay: "0.3s"
+          }}>
               {/* Glass effect overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"></div>
               
@@ -53,7 +52,7 @@ const HeroSection = () => {
                         <Calendar className="text-maraba-gold h-7 w-7 group-hover:scale-110 transition-transform duration-300" />
                         <div>
                           <p className="text-white/60 text-sm uppercase tracking-wide">Data</p>
-                          <p className="text-white text-lg font-medium">22 de Abril</p>
+                          <p className="text-white text-lg font-medium">06 de Maio</p>
                         </div>
                       </button>
                     </PopoverTrigger>
@@ -113,8 +112,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
