@@ -1,3 +1,4 @@
+
 import React from 'react';
 import JuniorMarabaWhite from '@/assets/junior_maraba_white.jpg';
 import JuniorMarabaColor from '@/assets/junior_maraba_color.jpg';
@@ -6,7 +7,7 @@ const InstructorProfile = () => {
   return (
     <section className="py-20 md:py-28 relative"
       style={{
-        backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')",
+        backgroundImage: "url('/lovable-uploads/d0f3a009-971c-4f24-9986-d92cf74652de.png')",
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}
