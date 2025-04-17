@@ -7,11 +7,11 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 
 const HeroSection = () => {
   return <section className="py-20 md:py-28 relative overflow-hidden">
-      {/* Simple background with higher opacity */}
+      {/* Background image with full visibility */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-50 z-[-1]"
+        className="absolute inset-0 bg-cover bg-center z-[-1]"
         style={{ 
-          backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')"
+          backgroundImage: `url(${'/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png'})`
         }}
       ></div>
       
