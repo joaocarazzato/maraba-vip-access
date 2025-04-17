@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Lock, Calendar, Clock, DollarSign } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+
 const HeroSection = () => {
   return <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
@@ -94,7 +95,10 @@ const HeroSection = () => {
                   </Popover>
                 </div>
 
-                <Button className="w-full py-6 mt-4 text-black font-bold tracking-wider rounded-lg group relative overflow-hidden">
+                <Button 
+                  className="w-full py-6 mt-4 text-black font-bold tracking-wider rounded-lg group relative overflow-hidden"
+                  onClick={() => window.open('https://chk.eduzz.com/D0RAJJ719Y', '_blank', 'noopener,noreferrer')}
+                >
                   <div className="absolute inset-0 bg-gradient-to-r from-maraba-gold to-maraba-light-gold"></div>
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     GARANTIR MINHA VAGA
@@ -114,4 +118,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
