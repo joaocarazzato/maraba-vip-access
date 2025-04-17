@@ -6,15 +6,15 @@ import { ArrowRight, Lock, Calendar, Clock, DollarSign } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const HeroSection = () => {
-  return <section className="py-20 md:py-28 relative overflow-hidden">
-      {/* Background image with full visibility */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-[-1]"
-        style={{ 
-          backgroundImage: `url(${'/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png'})`
-        }}
-      ></div>
-      
+  return (
+    <section 
+      className="py-20 md:py-28 relative"
+      style={{
+        backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
+    >
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-3/5 space-y-8 animate-fade-in">
@@ -122,7 +122,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default HeroSection;
