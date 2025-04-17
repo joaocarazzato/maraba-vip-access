@@ -11,7 +11,12 @@ const Footer = () => {
       <div className="minimal-container">
         <div className="flex flex-col items-center text-center space-y-8">
           <div className="flex items-center space-x-8">
-            <a href="https://www.instagram.com/juniormarabaoficial" className="text-white/60 hover:text-maraba-gold transition-colors">
+            <a 
+              href="https://www.instagram.com/juniormarabaoficial" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white/60 hover:text-maraba-gold transition-colors"
+            >
               <Instagram className="h-5 w-5" />
             </a>
           </div>
