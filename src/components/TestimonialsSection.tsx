@@ -1,14 +1,14 @@
-
 import React from 'react';
 import { Play } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import JuniorMarabaWhite from '@/assets/junior_maraba_white.jpg';
 import JuniorMarabaColor from '@/assets/junior_maraba_color.jpg';
 
 const VideoTestimonial = ({ thumbnail }: { thumbnail: string }) => {
   return (
     <div className="luxury-card bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 h-full">
-      <div className="relative aspect-video w-full overflow-hidden group cursor-pointer">
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300">
+      <AspectRatio ratio={4/5} className="w-full overflow-hidden group cursor-pointer">
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300 z-10">
           <div className="h-16 w-16 rounded-full bg-maraba-gold/90 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
             <Play className="h-6 w-6 text-black" fill="black" />
           </div>
@@ -18,7 +18,7 @@ const VideoTestimonial = ({ thumbnail }: { thumbnail: string }) => {
           alt="Depoimento em vídeo" 
           className="w-full h-full object-cover"
         />
-      </div>
+      </AspectRatio>
     </div>
   );
 };
