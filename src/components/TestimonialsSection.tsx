@@ -44,13 +44,15 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       videoId: "vkEoOK5WOlg",
-      thumbnail: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop"
+      thumbnail: "https://img.youtube.com/vi/vkEoOK5WOlg/maxresdefault.jpg"
     },
     {
-      thumbnail: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop"
+      videoId: "URjNc0i6XqU",
+      thumbnail: "https://img.youtube.com/vi/URjNc0i6XqU/maxresdefault.jpg"
     },
     {
-      thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop"
+      videoId: "mp932C6QW_8",
+      thumbnail: "https://img.youtube.com/vi/mp932C6QW_8/maxresdefault.jpg"
     }
   ];
 
