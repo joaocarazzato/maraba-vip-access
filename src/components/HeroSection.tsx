@@ -7,17 +7,13 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 
 const HeroSection = () => {
   return <section className="py-20 md:py-28 relative overflow-hidden">
-      {/* Black overlay */}
-      <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
-      
-      {/* Background image */}
+      {/* Simple background with higher opacity */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-30 z-[-2] grayscale"
-        style={{ backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')" }}
+        className="absolute inset-0 bg-cover bg-center opacity-50 z-[-1]"
+        style={{ 
+          backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')"
+        }}
       ></div>
-      
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80 z-[-1]"></div>
       
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
