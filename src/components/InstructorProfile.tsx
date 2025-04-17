@@ -1,11 +1,16 @@
-
 import React from 'react';
 import JuniorMarabaWhite from '@/assets/junior_maraba_white.jpg';
 import JuniorMarabaColor from '@/assets/junior_maraba_color.jpg';
 
 const InstructorProfile = () => {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-black">
+    <section className="py-20 md:py-28 relative"
+      style={{
+        backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
+    >
       <div className="absolute inset-0 bg-[url('@/assets/junior_maraba_white.jpg')] bg-cover bg-center opacity-5 z-0"></div>
       
       <div className="minimal-container relative z-10">
