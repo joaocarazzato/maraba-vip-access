@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
     },
     {
       videoId: "URjNc0i6XqU",
-      thumbnail: "https://i.ytimg.com/vi/URjNc0i6XqU/maxresdefault.jpg" // Updated URL format to ensure it works
+      thumbnail: "https://img.youtube.com/vi/URjNc0i6XqU/maxresdefault.jpg"
     },
     {
       videoId: "mp932C6QW_8",
