@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Lock, Calendar, Clock, DollarSign } from "lucide-react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const HeroSection = () => {
   return (
@@ -33,45 +34,69 @@ const HeroSection = () => {
             </p>
           </div>
           
-          <div className="w-full lg:w-2/5 animate-fade-in" style={{animationDelay: "0.3s"}}>
-            <Card className="relative luxury-card backdrop-blur-xl border-white/10 shadow-2xl overflow-hidden">
-              {/* Glass reflection effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
+          <div className="w-full lg:w-2/5">
+            <Card className="bg-black/40 border-white/10 shadow-lg rounded-xl overflow-hidden relative backdrop-blur-md animate-fade-in" style={{animationDelay: "0.3s"}}>
+              {/* Glass effect overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"></div>
               
-              <div className="p-8 space-y-8 relative z-10">
+              <div className="p-8 space-y-6 relative z-10">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <div className="h-1 w-8 bg-gradient-gold rounded-full"></div>
-                  <h3 className="text-center text-2xl font-semibold text-white">Reserve sua vaga</h3>
-                  <div className="h-1 w-8 bg-gradient-gold rounded-full"></div>
+                  <div className="h-0.5 w-6 bg-gradient-to-r from-maraba-gold to-maraba-light-gold rounded-full"></div>
+                  <h3 className="text-center text-xl font-semibold text-white">Reserve sua vaga</h3>
+                  <div className="h-0.5 w-6 bg-gradient-to-r from-maraba-light-gold to-maraba-gold rounded-full"></div>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="group flex items-center gap-3 bg-black/20 hover:bg-black/30 p-6 rounded-lg border border-white/5 transition-all duration-300 hover:border-maraba-gold/50">
-                    <Calendar className="text-maraba-gold h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
-                    <div>
-                      <p className="text-white/60 text-sm uppercase tracking-wide">Data</p>
-                      <p className="text-white text-lg font-medium">22 de Abril</p>
-                    </div>
-                  </div>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <button className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 p-4 rounded-lg border border-white/10 transition-all duration-300 hover:border-maraba-gold/30 text-left w-full">
+                        <Calendar className="text-maraba-gold h-7 w-7 group-hover:scale-110 transition-transform duration-300" />
+                        <div>
+                          <p className="text-white/60 text-sm uppercase tracking-wide">Data</p>
+                          <p className="text-white text-lg font-medium">22 de Abril</p>
+                        </div>
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent className="bg-black/90 border-maraba-gold/20 text-white p-4">
+                      <p className="text-sm">Segunda-feira, 22 de Abril de 2025</p>
+                    </PopoverContent>
+                  </Popover>
                   
-                  <div className="group flex items-center gap-3 bg-black/20 hover:bg-black/30 p-6 rounded-lg border border-white/5 transition-all duration-300 hover:border-maraba-gold/50">
-                    <Clock className="text-maraba-gold h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
-                    <div>
-                      <p className="text-white/60 text-sm uppercase tracking-wide">Horário</p>
-                      <p className="text-white text-lg font-medium">20:00</p>
-                    </div>
-                  </div>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <button className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 p-4 rounded-lg border border-white/10 transition-all duration-300 hover:border-maraba-gold/30 text-left w-full">
+                        <Clock className="text-maraba-gold h-7 w-7 group-hover:scale-110 transition-transform duration-300" />
+                        <div>
+                          <p className="text-white/60 text-sm uppercase tracking-wide">Horário</p>
+                          <p className="text-white text-lg font-medium">20:00</p>
+                        </div>
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent className="bg-black/90 border-maraba-gold/20 text-white p-4">
+                      <p className="text-sm">Início às 20:00 (horário de Brasília)</p>
+                    </PopoverContent>
+                  </Popover>
                 </div>
 
-                <div className="group flex items-center justify-center gap-3 bg-black/20 hover:bg-black/30 p-8 rounded-lg border border-white/5 transition-all duration-300 hover:border-maraba-gold/50">
-                  <DollarSign className="text-maraba-gold h-10 w-10 group-hover:scale-110 transition-transform duration-300" />
-                  <div className="text-center">
-                    <p className="text-white/60 text-sm uppercase tracking-wide">Investimento</p>
-                    <p className="text-white text-3xl font-semibold">R$ 97,00</p>
-                  </div>
+                <div className="mt-4">
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <button className="group flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 p-6 rounded-lg border border-white/10 transition-all duration-300 hover:border-maraba-gold/30 w-full">
+                        <DollarSign className="text-maraba-gold h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
+                        <div className="text-center">
+                          <p className="text-white/60 text-sm uppercase tracking-wide">Investimento</p>
+                          <p className="text-white text-3xl font-semibold">R$ 97,00</p>
+                        </div>
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent className="bg-black/90 border-maraba-gold/20 text-white p-4">
+                      <p className="text-sm">Pagamento único - Acesso imediato</p>
+                    </PopoverContent>
+                  </Popover>
                 </div>
 
-                <Button className="w-full bg-gradient-gold hover:opacity-90 text-black font-bold tracking-wider py-7 rounded-lg transition-all duration-300 shadow-xl group text-lg relative overflow-hidden">
+                <Button className="w-full py-6 mt-4 text-black font-bold tracking-wider rounded-lg group relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-maraba-gold to-maraba-light-gold"></div>
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     GARANTIR MINHA VAGA
                     <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
