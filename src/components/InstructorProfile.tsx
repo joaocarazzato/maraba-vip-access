@@ -1,7 +1,5 @@
-
 import React from 'react';
 import JuniorMarabaWhite from '@/assets/junior_maraba_white.jpg';
-import JuniorMarabaColor from '@/assets/junior_maraba_color.jpg';
 
 const InstructorProfile = () => {
   return (
@@ -21,9 +19,9 @@ const InstructorProfile = () => {
               <div className="absolute -inset-1 bg-gradient-gold rounded-full blur-md opacity-50"></div>
               <div className="relative rounded-full overflow-hidden border border-maraba-gold aspect-square max-w-md mx-auto">
                 <img 
-                  src={JuniorMarabaColor}
-                  alt="Marabá" 
-                  className="w-full h-full object-cover"
+                  src="/lovable-uploads/c58a4e4c-6757-4f81-ba7d-f010c35adf8a.png"
+                  alt="Professional in suit" 
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
