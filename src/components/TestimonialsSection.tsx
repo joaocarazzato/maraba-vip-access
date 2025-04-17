@@ -1,23 +1,40 @@
+
 import React from 'react';
 import { Play } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import JuniorMarabaWhite from '@/assets/junior_maraba_white.jpg';
 import JuniorMarabaColor from '@/assets/junior_maraba_color.jpg';
 
-const VideoTestimonial = ({ thumbnail }: { thumbnail: string }) => {
+const VideoTestimonial = ({ videoId, thumbnail }: { videoId?: string, thumbnail: string }) => {
+  const [showVideo, setShowVideo] = React.useState(false);
+
   return (
     <div className="luxury-card bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 h-full">
       <AspectRatio ratio={4/5} className="w-full overflow-hidden group cursor-pointer">
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300 z-10">
-          <div className="h-16 w-16 rounded-full bg-maraba-gold/90 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-            <Play className="h-6 w-6 text-black" fill="black" />
-          </div>
-        </div>
-        <img 
-          src={thumbnail}
-          alt="Depoimento em vídeo" 
-          className="w-full h-full object-cover"
-        />
+        {!showVideo ? (
+          <>
+            <div 
+              className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300 z-10"
+              onClick={() => videoId && setShowVideo(true)}
+            >
+              <div className="h-16 w-16 rounded-full bg-maraba-gold/90 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                <Play className="h-6 w-6 text-black" fill="black" />
+              </div>
+            </div>
+            <img 
+              src={thumbnail}
+              alt="Depoimento em vídeo" 
+              className="w-full h-full object-cover"
+            />
+          </>
+        ) : (
+          <iframe
+            className="w-full h-full absolute inset-0"
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        )}
       </AspectRatio>
     </div>
   );
@@ -26,6 +43,7 @@ const VideoTestimonial = ({ thumbnail }: { thumbnail: string }) => {
 const TestimonialsSection = () => {
   const testimonials = [
     {
+      videoId: "vkEoOK5WOlg",
       thumbnail: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop"
     },
     {
@@ -54,7 +72,7 @@ const TestimonialsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="animate-fade-in" style={{animationDelay: `${0.1 * index}s`}}>
-              <VideoTestimonial thumbnail={testimonial.thumbnail} />
+              <VideoTestimonial thumbnail={testimonial.thumbnail} videoId={testimonial.videoId} />
             </div>
           ))}
         </div>
