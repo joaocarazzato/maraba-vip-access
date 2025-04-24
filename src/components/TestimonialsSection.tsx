@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Play } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -47,10 +46,6 @@ const TestimonialsSection = () => {
       thumbnail: "https://img.youtube.com/vi/vkEoOK5WOlg/maxresdefault.jpg"
     },
     {
-      videoId: "URjNc0i6XqU",
-      thumbnail: "https://img.youtube.com/vi/URjNc0i6XqU/maxresdefault.jpg"
-    },
-    {
       videoId: "mp932C6QW_8",
       thumbnail: "https://img.youtube.com/vi/mp932C6QW_8/maxresdefault.jpg"
     }
@@ -71,7 +66,7 @@ const TestimonialsSection = () => {
           <div className="w-20 h-0.5 bg-gradient-gold mx-auto"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="animate-fade-in" style={{animationDelay: `${0.1 * index}s`}}>
               <VideoTestimonial thumbnail={testimonial.thumbnail} videoId={testimonial.videoId} />
