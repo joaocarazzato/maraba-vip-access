@@ -1,20 +1,14 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Lock, Calendar, Clock, DollarSign } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-
 const HeroSection = () => {
-  return (
-    <section 
-      className="py-20 md:py-28 relative"
-      style={{
-        backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}
-    >
+  return <section style={{
+    backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center"
+  }} className="md:py-28 relative py-[30px]">
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-3/5 space-y-8 animate-fade-in">
@@ -101,10 +95,7 @@ const HeroSection = () => {
                   </Popover>
                 </div>
 
-                <Button 
-                  className="w-full py-6 mt-4 text-black font-bold tracking-wider rounded-lg group relative overflow-hidden"
-                  onClick={() => window.open('https://chk.eduzz.com/D0RAJJ719Y', '_blank', 'noopener,noreferrer')}
-                >
+                <Button className="w-full py-6 mt-4 text-black font-bold tracking-wider rounded-lg group relative overflow-hidden" onClick={() => window.open('https://chk.eduzz.com/D0RAJJ719Y', '_blank', 'noopener,noreferrer')}>
                   <div className="absolute inset-0 bg-gradient-to-r from-maraba-gold to-maraba-light-gold"></div>
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     GARANTIR MINHA VAGA
@@ -122,8 +113,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

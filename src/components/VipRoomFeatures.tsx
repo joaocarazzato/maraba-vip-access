@@ -1,75 +1,64 @@
-
 import React from 'react';
 import { Target, Lightbulb, ArrowUp, Brain, Heart } from "lucide-react";
-
-const FeatureCard = ({ icon: Icon, title, description }: { 
-  icon: React.ElementType; 
-  title: string; 
-  description: string; 
+const FeatureCard = ({
+  icon: Icon,
+  title,
+  description
+}: {
+  icon: React.ElementType;
+  title: string;
+  description: string;
 }) => {
-  return (
-    <div className="luxury-card bg-black/20 backdrop-blur-sm hover:bg-black/30 transition-all duration-300 p-8 h-full">
+  return <div className="luxury-card bg-black/20 backdrop-blur-sm hover:bg-black/30 transition-all duration-300 p-8 h-full">
       <div className="mb-6 text-maraba-gold">
         <Icon className="h-6 w-6" />
       </div>
       <h3 className="text-xl font-medium text-white mb-4 gold-border pb-4">{title}</h3>
       <p className="text-white/70 leading-relaxed">{description}</p>
-    </div>
-  );
+    </div>;
 };
-
-const BenefitItem = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div className="flex items-start gap-4 animate-fade-in py-3 border-b border-white/10">
+const BenefitItem = ({
+  children
+}: {
+  children: React.ReactNode;
+}) => {
+  return <div className="flex items-start gap-4 animate-fade-in py-3 border-b border-white/10">
       <div className="mt-1 text-maraba-gold">
         <div className="h-6 w-6 rounded-full border border-maraba-gold flex items-center justify-center">✓</div>
       </div>
       <p className="text-white/90 text-lg font-light">{children}</p>
-    </div>
-  );
+    </div>;
 };
-
 const VipRoomFeatures = () => {
-  const features = [
-    {
-      icon: Target,
-      title: "Por que umas pessoas prosperam e outras não?",
-      description: "Entenda como sua mentalidade, suas crenças e o ambiente em que você vive determinam seus resultados – e como mudar isso."
-    },
-    {
-      icon: Lightbulb,
-      title: "Como identificar e romper com os ciclos de autossabotagem",
-      description: "Você pode estar se esforçando, mas rodando em círculos. Descubra como reencontrar o sentido da sua jornada e alinhar-se com seu propósito real."
-    },
-    {
-      icon: ArrowUp,
-      title: "As doze camadas do 'EU'",
-      description: "Um mapa que mostra o nível de desenvolvimento pessoal em que você está e o que precisa ser feito para subir de nível."
-    },
-    {
-      icon: Brain,
-      title: "Equilíbrio, clareza e poder pessoal",
-      description: "Prosperidade sem vazio existencial: como alinhar dinheiro, missão e espiritualidade para uma vida que realmente vale a pena."
-    },
-    {
-      icon: Heart,
-      title: "Corpo, mente e espírito",
-      description: "Alta performance sem burnout: descubra como integrar todas as dimensões do seu ser para um sucesso sustentável."
-    }
-  ];
-
-  return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('/lovable-uploads/e15daa98-67f5-4db3-b940-15737f36a539.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0.7
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black/40 z-[1]"></div>
+  const features = [{
+    icon: Target,
+    title: "Por que umas pessoas prosperam e outras não?",
+    description: "Entenda como sua mentalidade, suas crenças e o ambiente em que você vive determinam seus resultados – e como mudar isso."
+  }, {
+    icon: Lightbulb,
+    title: "Como identificar e romper com os ciclos de autossabotagem",
+    description: "Você pode estar se esforçando, mas rodando em círculos. Descubra como reencontrar o sentido da sua jornada e alinhar-se com seu propósito real."
+  }, {
+    icon: ArrowUp,
+    title: "As doze camadas do 'EU'",
+    description: "Um mapa que mostra o nível de desenvolvimento pessoal em que você está e o que precisa ser feito para subir de nível."
+  }, {
+    icon: Brain,
+    title: "Equilíbrio, clareza e poder pessoal",
+    description: "Prosperidade sem vazio existencial: como alinhar dinheiro, missão e espiritualidade para uma vida que realmente vale a pena."
+  }, {
+    icon: Heart,
+    title: "Corpo, mente e espírito",
+    description: "Alta performance sem burnout: descubra como integrar todas as dimensões do seu ser para um sucesso sustentável."
+  }];
+  return <section className="py-20 md:py-28 relative overflow-hidden">
+      <div className="absolute inset-0 z-0" style={{
+      backgroundImage: "url('/lovable-uploads/e15daa98-67f5-4db3-b940-15737f36a539.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      opacity: 0.7
+    }}></div>
+      <div className="absolute inset-0 bg-black/40 z-[1] py-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
@@ -83,15 +72,11 @@ const VipRoomFeatures = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="animate-fade-in" style={{animationDelay: `${0.1 * index}s`}}>
-              <FeatureCard 
-                icon={feature.icon} 
-                title={feature.title} 
-                description={feature.description} 
-              />
-            </div>
-          ))}
+          {features.map((feature, index) => <div key={index} className="animate-fade-in" style={{
+          animationDelay: `${0.1 * index}s`
+        }}>
+              <FeatureCard icon={feature.icon} title={feature.title} description={feature.description} />
+            </div>)}
         </div>
         
         <div className="!overflow-visible relative py-16 px-8 bg-black/30 backdrop-blur-sm max-w-4xl mx-auto mt-24 luxury-card">
@@ -117,8 +102,6 @@ const VipRoomFeatures = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default VipRoomFeatures;
