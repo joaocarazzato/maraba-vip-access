@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -28,7 +29,7 @@ const CtaSection = () => {
                 className="mx-auto bg-gradient-gold hover:opacity-90 text-black font-medium tracking-wider px-10 py-7 rounded-sm transition-all duration-300 shadow-gold group text-xl"
                 onClick={() => window.open('https://chk.eduzz.com/D0RAJJ719Y', '_blank', 'noopener,noreferrer')}
               >
-                QUERO ENTRAR NA SALA VIP
+                Acessar Sala VIP
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
