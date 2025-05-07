@@ -53,7 +53,7 @@ const HeroSection = () => {
                         <Calendar className="text-maraba-gold h-7 w-7 group-hover:scale-110 transition-transform duration-300" />
                         <div>
                           <p className="text-white/60 text-sm uppercase tracking-wide">Data</p>
-                          <p className="text-white text-lg font-medium">06 de Maio</p>
+                          <p className="text-white text-lg font-medium">28 de Maio</p>
                         </div>
                       </button>
                     </PopoverTrigger>
