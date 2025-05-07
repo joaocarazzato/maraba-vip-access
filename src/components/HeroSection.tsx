@@ -10,19 +10,20 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ 
-  backgroundImage = '/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png'
+  backgroundImage = '/lovable-uploads/ec3ba5bb-4f89-4d16-a35d-a31365547330.png'
 }) => {
   return (
     <section 
       style={{
         backgroundImage: `url('${backgroundImage}')`,
         backgroundSize: "cover",
-        backgroundPosition: "center"
+        backgroundPosition: "center top", 
+        backgroundRepeat: "no-repeat"
       }} 
       className="md:py-28 relative py-[30px]"
     >
-      {/* Overlay to ensure text readability against any background */}
-      <div className="absolute inset-0 bg-black/40 z-0"></div>
+      {/* Overlay mais escuro para garantir a legibilidade do conteúdo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/60 z-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -48,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
           
           <div className="w-full lg:w-2/5">
-            <Card className="bg-black/40 border-white/10 shadow-lg rounded-xl overflow-hidden relative backdrop-blur-md animate-fade-in" style={{
+            <Card className="bg-black/70 border-white/10 shadow-lg rounded-xl overflow-hidden relative backdrop-blur-md animate-fade-in" style={{
               animationDelay: "0.3s"
             }}>
               {/* Glass effect overlay */}
