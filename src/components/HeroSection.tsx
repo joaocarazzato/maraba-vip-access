@@ -17,13 +17,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       style={{
         backgroundImage: `url('${backgroundImage}')`,
         backgroundSize: "cover",
-        backgroundPosition: "center top", 
+        backgroundPosition: "center 20%", // Adjusted for better positioning on mobile
         backgroundRepeat: "no-repeat"
       }} 
       className="md:py-28 relative py-[30px]"
     >
-      {/* Overlay mais escuro para garantir a legibilidade do conteúdo */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/60 z-0"></div>
+      {/* Enhanced overlay gradient for better text contrast on mobile */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/70 md:from-black/80 md:via-black/70 md:to-black/60 z-0"></div>
       
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
