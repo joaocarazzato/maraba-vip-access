@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white">
-      <HeroSection />
+      <HeroSection backgroundImage="/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png" />
       <VipRoomFeatures />
       <InstructorProfile />
       <TestimonialsSection />

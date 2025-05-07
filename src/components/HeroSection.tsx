@@ -1,14 +1,29 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Lock, Calendar, Clock, DollarSign } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-const HeroSection = () => {
-  return <section style={{
-    backgroundImage: "url('/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center"
-  }} className="md:py-28 relative py-[30px]">
+
+interface HeroSectionProps {
+  backgroundImage?: string;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ 
+  backgroundImage = '/lovable-uploads/4188948e-6999-4ac7-8692-a27e626d45e5.png'
+}) => {
+  return (
+    <section 
+      style={{
+        backgroundImage: `url('${backgroundImage}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }} 
+      className="md:py-28 relative py-[30px]"
+    >
+      {/* Overlay to ensure text readability against any background */}
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
+      
       <div className="minimal-container relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-3/5 space-y-8 animate-fade-in">
@@ -34,8 +49,8 @@ const HeroSection = () => {
           
           <div className="w-full lg:w-2/5">
             <Card className="bg-black/40 border-white/10 shadow-lg rounded-xl overflow-hidden relative backdrop-blur-md animate-fade-in" style={{
-            animationDelay: "0.3s"
-          }}>
+              animationDelay: "0.3s"
+            }}>
               {/* Glass effect overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"></div>
               
@@ -113,6 +128,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
